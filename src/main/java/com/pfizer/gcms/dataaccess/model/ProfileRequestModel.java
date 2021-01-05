@@ -17,7 +17,7 @@ import javax.persistence.Table;
  * holding instances of data objects.
  */
 @Entity
-@Table(name = "GCMS_ODS.GCMS_PROFILE_REQUEST")
+@Table(name = "TR_RELTIO.PR_PROFILE_REQUEST")
 public class ProfileRequestModel extends AbstractModel {
 	
 	/**
@@ -26,7 +26,7 @@ public class ProfileRequestModel extends AbstractModel {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@SequenceGenerator(name="seq",sequenceName="GCMS_ODS.GCMS_SEQ")
+	@SequenceGenerator(name="seq",sequenceName="TR_RELTIO.TR_SEQ")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="seq")
 	@Column(name = "PROFILE_REQ_ID")
 	private BigDecimal   id;
@@ -40,32 +40,57 @@ public class ProfileRequestModel extends AbstractModel {
 	@Column(name = "LAST_NAME")
 	private String lastName;
 	
+	@Column(name = "MIDDLE_NAME")
+	private String middleName;
+	
 	@Column(name = "ORGANISATION_NAME")
 	private String organizationName;
+	
+	@Column(name = "ORGANISATION_TYPE")
+	private String organizationType;
 
 	@Column(name = "COUNTRY")
 	private String country;
 
-	@Column(name = "ADDRESS")
-	private String address;
+	@Column(name = "ADDRESS_LINE1")
+	private String addr1;
+	
+	@Column(name = "ADDRESS_LINE2")
+	private String addr2;
+	
+	@Column(name = "ADDRESS_LINE3")
+	private String addr3;
 
 	@Column(name = "CITY")
 	private String city;
 
 	@Column(name = "SPECILITY")
-	private String specility;
+	private String speciality;
 
-	@Column(name = "NOTES")
-	private String notes;
+	@Column(name = "ZIP")
+	private String poCode;	
 
-	@Column(name = "STATUS")
-	private String status;
-
-	@Column(name = "BP_ID")
-	private BigDecimal bpid;
+	@Column(name = "SUFFIX")
+	private String suffix;
 	
-
-
+	@Column(name = "TITLE")
+	private String title;
+	
+	@Column(name = "CREDENTIAL")
+	private String credential;
+	
+	@Column(name = "REGION")
+	private String region;
+	
+	@Column(name = "UNIQUE_IDENTIFIER")
+	private String uniqueIdentifier;
+	
+	@Column(name = "RELTIO_RES_MSG")
+	private String reltioMsg;
+	
+	@Column(name = "RELTIO_RES_CD")
+	private String reltioCode;
+	
 	/**
 	 * @return the profileReqId
 	 */
@@ -155,90 +180,154 @@ public class ProfileRequestModel extends AbstractModel {
 	}
 
 	/**
-	 * @return the address
-	 */
-	public String getAddress() {
-		return address;
-	}
-
-	/**
-	 * @param address the address to set
-	 */
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	/**
 	 * @return the city
 	 */
 	public String getCity() {
 		return city;
 	}
 
-	/**
-	 * @param city the city to set
-	 */
+	public String getSpeciality() {
+		return speciality;
+	}
+
+
+	public void setSpeciality(String speciality) {
+		this.speciality = speciality;
+	}
+
+
 	public void setCity(String city) {
 		this.city = city;
 	}
 
-	/**
-	 * @return the specility
-	 */
-	public String getSpecility() {
-		return specility;
-	}
 
-	/**
-	 * @param specility the specility to set
-	 */
-	public void setSpecility(String specility) {
-		this.specility = specility;
-	}
-
-	/**
-	 * @return the notes
-	 */
-	public String getNotes() {
-		return notes;
-	}
-
-	/**
-	 * @param notes the notes to set
-	 */
-	public void setNotes(String notes) {
-		this.notes = notes;
-	}
-
-	/**
-	 * @return the status
-	 */
-	public String getStatus() {
-		return status;
-	}
-
-	/**
-	 * @param status the status to set
-	 */
-	public void setStatus(String status) {
-		this.status = status;
-	}
-	
-	/**
-	 * @return the bpid
-	 */
-	public BigDecimal getBpid() {
-		return bpid;
+	public String getMiddleName() {
+		return middleName;
 	}
 
 
-	/**
-	 * @param bpid
-	 */
-	public void setBpid(BigDecimal bpid) {
-		this.bpid = bpid;
+	public void setMiddleName(String middleName) {
+		this.middleName = middleName;
 	}
 
-	
+
+	public String getOrganizationType() {
+		return organizationType;
+	}
+
+
+	public void setOrganizationType(String organizationType) {
+		this.organizationType = organizationType;
+	}
+
+
+	public String getAddr1() {
+		return addr1;
+	}
+
+
+	public void setAddr1(String addr1) {
+		this.addr1 = addr1;
+	}
+
+
+	public String getAddr2() {
+		return addr2;
+	}
+
+
+	public void setAddr2(String addr2) {
+		this.addr2 = addr2;
+	}
+
+
+	public String getAddr3() {
+		return addr3;
+	}
+
+
+	public void setAddr3(String addr3) {
+		this.addr3 = addr3;
+	}
+
+
+	public String getPoCode() {
+		return poCode;
+	}
+
+
+	public void setPoCode(String poCode) {
+		this.poCode = poCode;
+	}
+
+
+	public String getSuffix() {
+		return suffix;
+	}
+
+
+	public void setSuffix(String suffix) {
+		this.suffix = suffix;
+	}
+
+
+	public String getTitle() {
+		return title;
+	}
+
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+
+	public String getCredential() {
+		return credential;
+	}
+
+
+	public void setCredential(String credential) {
+		this.credential = credential;
+	}
+
+
+	public String getRegion() {
+		return region;
+	}
+
+
+	public void setRegion(String region) {
+		this.region = region;
+	}
+
+
+	public String getUniqueIdentifier() {
+		return uniqueIdentifier;
+	}
+
+
+	public void setUniqueIdentifier(String uniqueIdentifier) {
+		this.uniqueIdentifier = uniqueIdentifier;
+	}
+
+
+	public String getReltioMsg() {
+		return reltioMsg;
+	}
+
+
+	public void setReltioMsg(String reltioMsg) {
+		this.reltioMsg = reltioMsg;
+	}
+
+
+	public String getReltioCode() {
+		return reltioCode;
+	}
+
+
+	public void setReltioCode(String reltioCode) {
+		this.reltioCode = reltioCode;
+	}
 
 }

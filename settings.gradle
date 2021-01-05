@@ -15,4 +15,4 @@ include 'api'
 include 'services:webservice'
 */
 
-rootProject.name = 'gcms-dataaccess'
+rootProject.name = 'ptrs-reltio-dataaccess'

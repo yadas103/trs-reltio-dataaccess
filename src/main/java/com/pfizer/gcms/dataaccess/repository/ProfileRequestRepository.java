@@ -128,12 +128,7 @@ public class ProfileRequestRepository extends AbstractRepository<ProfileRequestM
 				model.setLastName((String)values[3]);
 				model.setOrganizationName((String)values[4]);
 				model.setCountry((String)values[5]);
-				model.setAddress((String)values[6]);
 				model.setCity((String)values[7]);
-				model.setSpecility((String)values[8]);
-				model.setNotes((String)values[9]);
-				model.setStatus((String)values[10]);
-				model.setBpid((BigDecimal)values[11]); 
 				model.setCreatedBy((String)values[12] + " " + (String)values[13] + "(" + (String)values[14] + ")");
 				models.add(model);
 			}			
@@ -219,12 +214,7 @@ LOG.debug("models" + models);
 				model.setLastName((String)values[3]);
 				model.setOrganizationName((String)values[4]);
 				model.setCountry((String)values[5]);
-				model.setAddress((String)values[6]);
 				model.setCity((String)values[7]);
-				model.setSpecility((String)values[8]);
-				model.setNotes((String)values[9]);
-				model.setStatus((String)values[10]);
-				model.setBpid((BigDecimal)values[11]); 
 				model.setCreatedBy((String)values[12] + " " + (String)values[13] + "(" + (String)values[14] + ")");
 				models.add(model);
 			}			

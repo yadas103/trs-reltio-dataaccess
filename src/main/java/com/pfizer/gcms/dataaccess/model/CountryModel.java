@@ -17,7 +17,7 @@ import javax.persistence.Table;
  * holding instances of data objects.This holds the Country data object.
  */
 @Entity
-@Table(name = "GCMS_ODS.GCMS_COUNTRIES_VIEW")
+@Table(name = "TR_ODS.ODS_COUNTRIES")
 public class CountryModel extends AbstractModel {
 
 	/**
@@ -60,8 +60,6 @@ public class CountryModel extends AbstractModel {
 	@Column(name = "CRNC_ID")
 	private BigDecimal currencyID;
 	
-	@Column(name = "EFPIA_CNTRY_FLAG")
-	private String efpiaCntryFlag;
 	
 	//@OneToMany(cascade = CascadeType.ALL, mappedBy = "country", fetch = FetchType.LAZY)
 	//@JoinColumn(name = "CNTRY_ID", referencedColumnName = "CNTRY_ID")
@@ -163,18 +161,4 @@ public class CountryModel extends AbstractModel {
 		this.currencyID = currencyID;
 	}
 
-	/**
-	 * @return the efpiaCntryFlag
-	 */
-	
-	public String getEfpiaCntryFlag() {
-		return efpiaCntryFlag;
-	}
-
-	/**
-	 * @param efpiaCntryFlag the efpiaCntryFlag to set
-	 */
-	public void setEfpiaCntryFlag(String efpiaCntryFlag) {
-		this.efpiaCntryFlag = efpiaCntryFlag;
-	}
 }
