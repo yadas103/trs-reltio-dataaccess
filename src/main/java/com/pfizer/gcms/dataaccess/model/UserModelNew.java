@@ -3,27 +3,18 @@
  */
 package com.pfizer.gcms.dataaccess.model;
 
-import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
- * @author khans129
+ * @author arunkv
  * UserModel is a POJO classes,annotated with hibernate mappings and they are responsible for 
  * holding instances of data objects.This holds the User data object.
  */
 @Entity
-@Table(name = "GCMS_ODS.GCMS_USERS")
+@Table(name = "TR_ODS.ODS_USERS")
 public class UserModelNew extends AbstractModel {
 	/**
 	 * The constant user profiles.
