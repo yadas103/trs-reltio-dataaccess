@@ -97,6 +97,9 @@ public class ProfileRequestModel extends AbstractModel {
 	@Column(name = "RELTIO_RES_CD")
 	private String reltioCode;
 	
+	@Column(name = "CUSTOM_DETAILS")
+	private String customDet;
+	
 	/**
 	 * @return the profileReqId
 	 */
@@ -356,4 +359,15 @@ public class ProfileRequestModel extends AbstractModel {
 		this.state = state;
 	}
 
+
+	public String getCustomDet() {
+		return customDet;
+	}
+
+
+	public void setCustomDet(String customDet) {
+		this.customDet = customDet;
+	}
+
+	
 }
