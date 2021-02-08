@@ -100,6 +100,12 @@ public class ProfileRequestModel extends AbstractModel {
 	@Column(name = "CUSTOM_DETAILS")
 	private String customDet;
 	
+	@Column(name = "RELTIO_ID")
+	private String reltioId;
+	
+	@Column(name = "SPECILITY_CODE")
+	private String specialityCode;
+	
 	/**
 	 * @return the profileReqId
 	 */
@@ -369,5 +375,24 @@ public class ProfileRequestModel extends AbstractModel {
 		this.customDet = customDet;
 	}
 
+
+	public String getReltioId() {
+		return reltioId;
+	}
+
+
+	public void setReltioId(String reltioId) {
+		this.reltioId = reltioId;
+	}
+
+
+	public String getSpecialityCode() {
+		return specialityCode;
+	}
+
+
+	public void setSpecialityCode(String specialityCode) {
+		this.specialityCode = specialityCode;
+	}
 	
 }
