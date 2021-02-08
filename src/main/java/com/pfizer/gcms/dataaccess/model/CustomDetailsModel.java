@@ -40,6 +40,8 @@ public class CustomDetailsModel extends AbstractModel {
 	@Column(name = "PARTY_TYPE")
 	private String partyType;
 	
+	@Column(name = "TEXT_ENABLED")
+	private String textEnabled;
 	
 	/**
 	 * @return the profileReqId
@@ -96,4 +98,13 @@ public class CustomDetailsModel extends AbstractModel {
 		this.fieldId = fieldId;
 	}
 	
+	
+	public String getTextEnabled() {
+		return textEnabled;
+	}
+
+
+	public void setTextEnabled(String textEnabled) {
+		this.textEnabled = textEnabled;
+	}
 }
