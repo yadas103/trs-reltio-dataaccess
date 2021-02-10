@@ -106,6 +106,9 @@ public class ProfileRequestModel extends AbstractModel {
 	@Column(name = "SPECILITY_CODE")
 	private String specialityCode;
 	
+	@Column(name = "GENDER")
+	private String gender;
+	
 	/**
 	 * @return the profileReqId
 	 */
@@ -393,6 +396,16 @@ public class ProfileRequestModel extends AbstractModel {
 
 	public void setSpecialityCode(String specialityCode) {
 		this.specialityCode = specialityCode;
+	}
+
+
+	public String getGender() {
+		return gender;
+	}
+
+
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
 	
 }
